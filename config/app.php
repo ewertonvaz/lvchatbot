@@ -1,4 +1,6 @@
 <?php
+putenv('GOOGLE_CLOUD_PROJECT=conversa-fiada-kxtivm');
+putenv('GOOGLE_APPLICATION_CREDENTIALS='.base_path('config/key/conversa-fiada-kxtivm-b0b92f3d4ab0.json'));
 
 return [
 

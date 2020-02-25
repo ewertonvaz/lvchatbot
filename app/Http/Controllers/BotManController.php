@@ -6,7 +6,6 @@ use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
 use App\Conversations\primeiraConversa;
-use App\Conversations\MinhaConversa;
 use Illuminate\Support\Collection;
 
 class BotManController extends Controller
@@ -22,14 +21,7 @@ class BotManController extends Controller
         $botman->fallback(function($bot) {
             $bot->reply( $this->fallBackResponse());
         });
-        // \Log::info($botman->getUser()->getId());
-        //$botman->say('Hello', $botman->getUser()->getId() );
-        
-        // $botman->on('event', function($payload, $bot) {
-	
-        // });
-        $contaOi = 0;
-
+ 
         $botman->listen();
     }
 
@@ -63,31 +55,5 @@ class BotManController extends Controller
             'Peço que repita, pois não consegui entender.',
             'Tente: escolher cor, oi, vamos conversar',
         ])->random();
-    }
-
-    /*     
-    public function minhaConversa(Botman $bot){
-        $bot->startConversation(new MinhaConversa());
-    } */
-
-
-    /**
-     * Get the value of contaOi
-     */ 
-    static function getContaOi()
-    {
-        return $this->contaOi;
-    }
-
-    /**
-     * Set the value of contaOi
-     *
-     * @return  self
-     */ 
-    public function setContaOi($contaOi)
-    {
-        $this->contaOi = $contaOi;
-
-        return $this;
     }
 }
