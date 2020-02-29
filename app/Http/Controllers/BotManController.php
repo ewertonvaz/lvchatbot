@@ -18,9 +18,11 @@ class BotManController extends Controller
     {
         $botman = app('botman');
 
+        /*
         $botman->fallback(function($bot) {
             $bot->reply( $this->fallBackResponse());
         });
+        */
  
         $botman->listen();
     }

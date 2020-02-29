@@ -35,10 +35,10 @@ class primeiraConversa extends Conversation
                     $attachment = new Image('/img/flor-azul.jpg');
                     $this->say("Você é confiável e amigável!");
                 }
+                $message = OutgoingMessage::create('Receba nossas boas vindas e aceite  esta flor como prova de amizade')
+                    ->withAttachment($attachment);
+                $this->getBot()->reply($message);
             }
-            $message = OutgoingMessage::create('Receba nossas boas vindas e aceite  esta flor como prova de amizade')
-                ->withAttachment($attachment);
-            $this->getBot()->reply($message);
         });
     }
 

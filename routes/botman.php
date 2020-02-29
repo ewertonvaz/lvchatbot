@@ -33,17 +33,17 @@ $botman->hears('I want ([0-9]+) portions of (Cheese|Cake)', function ($bot, $amo
     $bot->reply('You will get '.$amount.' portions of '.$dish.' served shortly.');
 });
 
-$botman->hears('botman.agent.menu', function ($bot) {
+/* $botman->hears('botman.agent.menu', function ($bot) {
     $extras = $bot->getMessage()->getExtras();
     $apiReply = $extras['apiReply'];
     $apiAction = $extras['apiAction'];
     $apiIntent = $extras['apiIntent'];
     
     $bot->reply($apiReply);
-})->middleware($dialogflow);
+})->middleware($dialogflow); */
 
-/* $botman->fallback(function($bot) {
+$botman->fallback(function($bot) {
     //return $bot->reply('Desculpe, não entendi. Esta é a lista de comandos que eu conheço: \'oi\', \'vamos conversar\'');   
+    return $bot->reply($bot->getMessage()->getExtras('apiReply'));
     //return $bot->reply($bot->getMessage()->getExtras('apiIntent'));
-    return $bot->reply($bot->getMessage()->getExtras('apiIntent'));
-}); */
+});

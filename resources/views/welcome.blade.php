@@ -69,11 +69,10 @@
 
     <script>
         var botmanWidget = {
-            title: 'Parabah Dev',
-            introMessage: 'Olá, sou o Parabot seu assistente virtual desejo boas vindas. 🙂<br>Estou aqui para ajudar, entendo os seguintes comandos: <br><strong>oi</strong><br><strong>vamos conversar</strong><br><strong>escolher cor</strong><br>Ou se quiser apenas conversar me dê um <strong>oi</strong>!',
-            bubbleAvatarUrl: '/img/parabah-logo.png',
+            title: 'Laravel chatbot com Botman',
+            introMessage: 'Olá, sou o seu assistente virtual desejo boas vindas. 🙂<br>Estou aqui para ajudar, entendo os seguintes comandos: <br><strong>vamos conversar</strong><br><strong>escolher cor</strong><br>Ou se quiser apenas conversar me dê um <strong>oi</strong>!',
+            bubbleAvatarUrl: '/img/bot-logo.png',
             placeholderText: 'Digite sua mensagem...',
-            chatServer: '/botman',
             mainColor: 'lightblue',
             bubbleBackground: 'lightblue',
         };
