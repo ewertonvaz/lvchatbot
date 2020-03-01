@@ -70,7 +70,7 @@
     <script>
         var botmanWidget = {
             title: 'Laravel chatbot com Botman',
-            introMessage: 'Olá, sou o seu assistente virtual desejo boas vindas. 🙂<br>Estou aqui para ajudar, entendo os seguintes comandos: <br><strong>vamos conversar</strong><br><strong>escolher cor</strong><br>Ou se quiser apenas conversar me dê um <strong>oi</strong>!',
+            introMessage: 'Olá, sou o seu assistente virtual desejo boas vindas. 🙂<br>Estou aqui para ajudar, entendo os seguintes comandos: <br><strong>vamos conversar</strong><br><strong>escolher cor</strong><br>Ou se quiser apenas bater papo me dê um <strong>oi</strong>!',
             bubbleAvatarUrl: '/img/bot-logo.png',
             placeholderText: 'Digite sua mensagem...',
             mainColor: 'lightblue',

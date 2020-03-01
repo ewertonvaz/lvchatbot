@@ -11,8 +11,8 @@ $botman->middleware->received($dialogflow);
 
 // $botman->say('Hello', $botman->getUser()->getId() );
 
-$botman->hears('(Oi|Olá|Salve)', function ($bot, $saudacao) {
-    $bot->reply($saudacao.' pra você também! 👋'); 
+$botman->hears(trans('chatbot.in-salute'), function ($bot, $saudacao) {
+    $bot->reply($saudacao.trans('chatbot.out-salute')); 
 });
 
 $botman->hears('Vamos conversar', BotManController::class.'@startConversation');
